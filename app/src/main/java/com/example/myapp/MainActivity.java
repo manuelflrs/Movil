@@ -4,6 +4,9 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -54,6 +57,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });        AlertDialog myDialog = dialogconf.create();
         myDialog.show();
+
+
+        Notification.Builder notifBuilder = new Notification.Builder(this);
+        notifBuilder.setSmallIcon(R.mipmap.ic_launcher);
+        notifBuilder.setContentTitle("This is my cool notif");
+        notifBuilder.setContentText("This is the detail of my notif");
+
+
+        Intent notificationIntent;
+
+        notificationIntent = new Intent(this, ChildActivity.class);
+        PendingIntent contentIntent =
+                PendingIntent.getActivity(context, 0, notificationIntent,0);
+        notifBuilder.setContentIntent(contentIntent);
+
+        NotificationManager myNotification  = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        myNotification.notify(111, notifBuilder.build());
+
 
 
         myTextView.setText("Hello folks");
