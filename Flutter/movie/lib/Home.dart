@@ -1,32 +1,26 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:movie/HttpHelper.dart';
+import 'package:movie/Movie.dart';
 
-class Home extends StatefulWidget {
-  @override
-  _HomeState createState() => _HomeState();
-}
+import 'MovieList.dart';
 
-class _HomeState extends State<Home> {
-  String result;
-  HttpHelper helper;
-
-  @override
-  void initState() {
-    helper = new HttpHelper();
-    result = 'Loading ... ';
-    super.initState();
-  }
-
+class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    helper.getMovieList().then((json) {
-      setState(() {
-        result = json;
-      });
-    });
-
-    return Container(
-      child: Text(result),
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Colors.yellow,
+        title: Text(
+          'Movies',
+          style: GoogleFonts.pacifico(
+            color: Colors.black,
+            fontSize: 30.0,
+          ),
+        ),
+      ),
+      body: MovieList(),
     );
   }
 }

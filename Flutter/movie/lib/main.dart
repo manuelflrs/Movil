@@ -9,20 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Movies App',
-      home: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          backgroundColor: Colors.yellow,
-          title: Text(
-            'Movies',
-            style: GoogleFonts.pacifico(
-              color: Colors.black,
-              fontSize: 30.0,
-            ),
-          ),
-        ),
-        body: Home(),
-      ),
+      home: Home(),
     );
   }
 }
