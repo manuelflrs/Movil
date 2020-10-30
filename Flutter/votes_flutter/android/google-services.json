@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "824553602469",
+    "firebase_url": "https://flapp-f9747.firebaseio.com",
+    "project_id": "flapp-f9747",
+    "storage_bucket": "flapp-f9747.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:824553602469:android:0dca6815dea1b436f63c4c",
+        "android_client_info": {
+          "package_name": "com.example.votes_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "824553602469-gg1umuhbsqghigc728deiuioeljp2l4q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_1jUnYJcw1cLr6qVH1tF_faT_sc8b3oE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "824553602469-gg1umuhbsqghigc728deiuioeljp2l4q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
