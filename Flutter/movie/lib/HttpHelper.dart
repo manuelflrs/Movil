@@ -21,8 +21,6 @@ class HttpHelper {
 
     if (resp.statusCode == 200) {
       final decodeJsonMap = json.decode(resp.body);
-      List<Movie> movies2 =
-          decodeJsonMap['results'].map((e) => Movie.fromJsonMap(e));
       Movies movieList = new Movies.fromjsonList(decodeJsonMap['results']);
       return movieList.movies;
     } else {
